@@ -1,219 +1,237 @@
 /**
  * v0 by Vercel.
- * @see https://v0.dev/t/AXJswsRr69l
+ * @see https://v0.dev/t/EifEq2TZcl1
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card"
 
 export default function Component() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="bg-primary text-primary-foreground py-4 px-6 flex justify-between items-center">
-        <Link href="#" className="text-2xl font-bold" prefetch={false}>
-          Cybersecurity Services
-        </Link>
-        <nav className="hidden md:flex gap-6">
-          <Link href="#" className="hover:underline" prefetch={false}>
-            Home
+      <header className="bg-primary text-primary-foreground py-4 px-6 md:py-6 md:px-10">
+        <div className="container mx-auto flex items-center justify-between">
+          <Link href="#" className="text-2xl font-bold" prefetch={false}>
+            WorknHire
           </Link>
-          <Link href="#" className="hover:underline" prefetch={false}>
-            Services
-          </Link>
-          <Link href="#" className="hover:underline" prefetch={false}>
-            About
-          </Link>
-          <Link href="#" className="hover:underline" prefetch={false}>
-            Contact
-          </Link>
-        </nav>
-        <Button variant="outline" className="md:hidden">
-          <MenuIcon className="h-6 w-6" />
-          <span className="sr-only">Toggle Menu</span>
-        </Button>
+          <nav className="hidden md:flex items-center space-x-6">
+            <Link href="#" className="hover:underline" prefetch={false}>
+              Find Jobs
+            </Link>
+            <Link href="#" className="hover:underline" prefetch={false}>
+              Companies
+            </Link>
+            <Link href="#" className="hover:underline" prefetch={false}>
+              Pricing
+            </Link>
+            <Link href="#" className="hover:underline" prefetch={false}>
+              About
+            </Link>
+          </nav>
+          <div className="flex items-center space-x-4">
+            <Button variant="outline" className="hidden md:inline-flex">
+              Sign In
+            </Button>
+            <Button className="hidden md:inline-flex">Post a Job</Button>
+            <Button variant="ghost" size="icon" className="md:hidden">
+              <MenuIcon className="w-6 h-6" />
+              <span className="sr-only">Toggle Menu</span>
+            </Button>
+          </div>
+        </div>
       </header>
-      <main className="flex-1 py-10 px-4 md:px-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        <div className="bg-background rounded-lg shadow-md overflow-hidden">
-          <img
-            src="/placeholder.svg"
-            alt="Cybersecurity Fundamentals"
-            width={400}
-            height={250}
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-6">
-            <h3 className="text-xl font-bold mb-2">Cybersecurity Fundamentals</h3>
-            <p className="text-muted-foreground mb-4">
-              Learn the core concepts of cybersecurity, including network security, risk management, and incident
-              response.
-            </p>
-            <Link
-              href="#"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90"
-              prefetch={false}
-            >
-              Learn More
-              <ArrowRightIcon className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-        <div className="bg-background rounded-lg shadow-md overflow-hidden">
-          <img
-            src="/placeholder.svg"
-            alt="Ethical Hacking"
-            width={400}
-            height={250}
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-6">
-            <h3 className="text-xl font-bold mb-2">Ethical Hacking</h3>
-            <p className="text-muted-foreground mb-4">
-              Explore the world of ethical hacking and learn how to identify and mitigate security vulnerabilities.
-            </p>
-            <Link
-              href="#"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90"
-              prefetch={false}
-            >
-              Learn More
-              <ArrowRightIcon className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-        <div className="bg-background rounded-lg shadow-md overflow-hidden">
-          <img
-            src="/placeholder.svg"
-            alt="Incident Response"
-            width={400}
-            height={250}
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-6">
-            <h3 className="text-xl font-bold mb-2">Incident Response</h3>
-            <p className="text-muted-foreground mb-4">
-              Learn how to effectively respond to and mitigate cybersecurity incidents, including data breaches and
-              malware attacks.
-            </p>
-            <Link
-              href="#"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90"
-              prefetch={false}
-            >
-              Learn More
-              <ArrowRightIcon className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-        <div className="bg-background rounded-lg shadow-md overflow-hidden">
-          <img
-            src="/placeholder.svg"
-            alt="Network Security"
-            width={400}
-            height={250}
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-6">
-            <h3 className="text-xl font-bold mb-2">Network Security</h3>
-            <p className="text-muted-foreground mb-4">
-              Gain expertise in securing networks, including firewalls, VPNs, and intrusion detection systems.
-            </p>
-            <Link
-              href="#"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90"
-              prefetch={false}
-            >
-              Learn More
-              <ArrowRightIcon className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-        <div className="bg-background rounded-lg shadow-md overflow-hidden">
-          <img
-            src="/placeholder.svg"
-            alt="Risk Management"
-            width={400}
-            height={250}
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-6">
-            <h3 className="text-xl font-bold mb-2">Risk Management</h3>
-            <p className="text-muted-foreground mb-4">
-              Develop skills in identifying, assessing, and mitigating cybersecurity risks for organizations.
-            </p>
-            <Link
-              href="#"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90"
-              prefetch={false}
-            >
-              Learn More
-              <ArrowRightIcon className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-        <div className="bg-background rounded-lg shadow-md overflow-hidden">
-          <img
-            src="/placeholder.svg"
-            alt="Cloud Security"
-            width={400}
-            height={250}
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-6">
-            <h3 className="text-xl font-bold mb-2">Cloud Security</h3>
-            <p className="text-muted-foreground mb-4">
-              Learn how to secure cloud-based infrastructure and applications, including best practices and compliance
-              requirements.
-            </p>
-            <Link
-              href="#"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90"
-              prefetch={false}
-            >
-              Learn More
-              <ArrowRightIcon className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-      </main>
-      <footer className="bg-muted text-muted-foreground py-6 px-4 md:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
-        <div className="flex flex-col md:flex-row gap-4">
-          <div>
-            <h4 className="font-bold mb-2">Contact Us</h4>
-            <p>
-              123 Cyber Lane
-              <br />
-              Secure City, USA 12345
-              <br />
-              Phone: (123) 456-7890
-              <br />
-              Email: info@cybersecurityservices.com
-            </p>
-          </div>
-          <div>
-            <h4 className="font-bold mb-2">Follow Us</h4>
-            <div className="flex gap-4">
-              <Link href="#" className="hover:text-primary" prefetch={false}>
-                <FacebookIcon className="h-6 w-6" />
-              </Link>
-              <Link href="#" className="hover:text-primary" prefetch={false}>
-                <TwitterIcon className="h-6 w-6" />
-              </Link>
-              <Link href="#" className="hover:text-primary" prefetch={false}>
-                <InstagramIcon className="h-6 w-6" />
-              </Link>
-              <Link href="#" className="hover:text-primary" prefetch={false}>
-                <LinkedinIcon className="h-6 w-6" />
-              </Link>
+      <main className="flex-1">
+        <section className="bg-primary py-12 md:py-20">
+          <div className="container mx-auto px-6 md:px-10">
+            <div className="max-w-3xl mx-auto text-center space-y-4">
+              <h1 className="text-3xl md:text-5xl font-bold text-primary-foreground">Find your dream job</h1>
+              <p className="text-lg md:text-xl text-primary-foreground/80">
+                Search and apply for the best job opportunities in your field.
+              </p>
+              <form className="flex items-center bg-primary-foreground rounded-full py-2 px-4 space-x-2">
+                <SearchIcon className="w-6 h-6 text-primary" />
+                <Input type="text" placeholder="Search for jobs..." className="flex-1 bg-transparent outline-none" />
+                <Button className="rounded-full px-6 py-2">Search</Button>
+              </form>
             </div>
           </div>
+        </section>
+        <section className="py-12 md:py-20">
+          <div className="container mx-auto px-6 md:px-10">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h2 className="text-2xl md:text-3xl font-bold">Featured Jobs</h2>
+                <p className="text-muted-foreground">Explore the latest job opportunities from top companies.</p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <Card>
+                  <CardHeader>
+                    <img src="/placeholder.svg" width={80} height={80} alt="Company Logo" className="rounded-full" />
+                  </CardHeader>
+                  <CardContent className="space-y-2">
+                    <h3 className="text-lg font-semibold">Senior Software Engineer</h3>
+                    <div className="flex items-center space-x-2 text-muted-foreground">
+                      <BriefcaseIcon className="w-5 h-5" />
+                      <span>Acme Inc.</span>
+                    </div>
+                    <div className="flex items-center space-x-2 text-muted-foreground">
+                      <MapPinIcon className="w-5 h-5" />
+                      <span>San Francisco, CA</span>
+                    </div>
+                    <div className="flex items-center space-x-2 text-muted-foreground">
+                      <DollarSignIcon className="w-5 h-5" />
+                      <span>$120,000 - $150,000</span>
+                    </div>
+                  </CardContent>
+                  <CardFooter>
+                    <Button className="w-full">Apply Now</Button>
+                  </CardFooter>
+                </Card>
+                <Card>
+                  <CardHeader>
+                    <img src="/placeholder.svg" width={80} height={80} alt="Company Logo" className="rounded-full" />
+                  </CardHeader>
+                  <CardContent className="space-y-2">
+                    <h3 className="text-lg font-semibold">Product Manager</h3>
+                    <div className="flex items-center space-x-2 text-muted-foreground">
+                      <BriefcaseIcon className="w-5 h-5" />
+                      <span>Acme Inc.</span>
+                    </div>
+                    <div className="flex items-center space-x-2 text-muted-foreground">
+                      <MapPinIcon className="w-5 h-5" />
+                      <span>New York, NY</span>
+                    </div>
+                    <div className="flex items-center space-x-2 text-muted-foreground">
+                      <DollarSignIcon className="w-5 h-5" />
+                      <span>$90,000 - $120,000</span>
+                    </div>
+                  </CardContent>
+                  <CardFooter>
+                    <Button className="w-full">Apply Now</Button>
+                  </CardFooter>
+                </Card>
+                <Card>
+                  <CardHeader>
+                    <img src="/placeholder.svg" width={80} height={80} alt="Company Logo" className="rounded-full" />
+                  </CardHeader>
+                  <CardContent className="space-y-2">
+                    <h3 className="text-lg font-semibold">Marketing Coordinator</h3>
+                    <div className="flex items-center space-x-2 text-muted-foreground">
+                      <BriefcaseIcon className="w-5 h-5" />
+                      <span>Acme Inc.</span>
+                    </div>
+                    <div className="flex items-center space-x-2 text-muted-foreground">
+                      <MapPinIcon className="w-5 h-5" />
+                      <span>Chicago, IL</span>
+                    </div>
+                    <div className="flex items-center space-x-2 text-muted-foreground">
+                      <DollarSignIcon className="w-5 h-5" />
+                      <span>$50,000 - $70,000</span>
+                    </div>
+                  </CardContent>
+                  <CardFooter>
+                    <Button className="w-full">Apply Now</Button>
+                  </CardFooter>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="bg-muted py-12 md:py-20">
+          <div className="container mx-auto px-6 md:px-10">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h2 className="text-2xl md:text-3xl font-bold">Browse by Job Category</h2>
+                <p className="text-muted-foreground">Explore job opportunities in your desired field.</p>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+                <Link
+                  href="#"
+                  className="flex flex-col items-center space-y-2 bg-background p-4 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors"
+                  prefetch={false}
+                >
+                  <BriefcaseIcon className="w-8 h-8" />
+                  <span className="text-sm font-medium">Engineering</span>
+                </Link>
+                <Link
+                  href="#"
+                  className="flex flex-col items-center space-y-2 bg-background p-4 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors"
+                  prefetch={false}
+                >
+                  <CodeIcon className="w-8 h-8" />
+                  <span className="text-sm font-medium">IT & Software</span>
+                </Link>
+                <Link
+                  href="#"
+                  className="flex flex-col items-center space-y-2 bg-background p-4 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors"
+                  prefetch={false}
+                >
+                  <UsersIcon className="w-8 h-8" />
+                  <span className="text-sm font-medium">Human Resources</span>
+                </Link>
+                <Link
+                  href="#"
+                  className="flex flex-col items-center space-y-2 bg-background p-4 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors"
+                  prefetch={false}
+                >
+                  <ClipboardIcon className="w-8 h-8" />
+                  <span className="text-sm font-medium">Administrative</span>
+                </Link>
+                <Link
+                  href="#"
+                  className="flex flex-col items-center space-y-2 bg-background p-4 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors"
+                  prefetch={false}
+                >
+                  <ApertureIcon className="w-8 h-8" />
+                  <span className="text-sm font-medium">Design</span>
+                </Link>
+                <Link
+                  href="#"
+                  className="flex flex-col items-center space-y-2 bg-background p-4 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors"
+                  prefetch={false}
+                >
+                  <BriefcaseIcon className="w-8 h-8" />
+                  <span className="text-sm font-medium">Marketing</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer className="bg-primary text-primary-foreground py-8 px-6 md:py-12 md:px-10">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+          <div className="text-lg font-bold">WorknHire</div>
+          <nav className="flex items-center space-x-6">
+            <Link href="#" className="hover:underline" prefetch={false}>
+              Find Jobs
+            </Link>
+            <Link href="#" className="hover:underline" prefetch={false}>
+              Companies
+            </Link>
+            <Link href="#" className="hover:underline" prefetch={false}>
+              Pricing
+            </Link>
+            <Link href="#" className="hover:underline" prefetch={false}>
+              About
+            </Link>
+          </nav>
+          <div className="flex items-center space-x-4">
+            <Link href="#" className="hover:underline" prefetch={false}>
+              Privacy Policy
+            </Link>
+            <Link href="#" className="hover:underline" prefetch={false}>
+              Terms of Service
+            </Link>
+          </div>
         </div>
-        <div className="text-sm">&copy; 2024 Cybersecurity Services. All rights reserved.</div>
       </footer>
     </div>
   )
 }
 
-function ArrowRightIcon(props) {
+function ApertureIcon(props) {
   return (
     <svg
       {...props}
@@ -227,14 +245,19 @@ function ArrowRightIcon(props) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <path d="M5 12h14" />
-      <path d="m12 5 7 7-7 7" />
+      <circle cx="12" cy="12" r="10" />
+      <path d="m14.31 8 5.74 9.94" />
+      <path d="M9.69 8h11.48" />
+      <path d="m7.38 12 5.74-9.94" />
+      <path d="M9.69 16 3.95 6.06" />
+      <path d="M14.31 16H2.83" />
+      <path d="m16.62 12-5.74 9.94" />
     </svg>
   )
 }
 
 
-function FacebookIcon(props) {
+function BriefcaseIcon(props) {
   return (
     <svg
       {...props}
@@ -248,13 +271,14 @@ function FacebookIcon(props) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+      <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+      <rect width="20" height="14" x="2" y="6" rx="2" />
     </svg>
   )
 }
 
 
-function InstagramIcon(props) {
+function ClipboardIcon(props) {
   return (
     <svg
       {...props}
@@ -268,15 +292,14 @@ function InstagramIcon(props) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+      <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+      <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
     </svg>
   )
 }
 
 
-function LinkedinIcon(props) {
+function CodeIcon(props) {
   return (
     <svg
       {...props}
@@ -290,9 +313,50 @@ function LinkedinIcon(props) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-      <rect width="4" height="12" x="2" y="9" />
-      <circle cx="4" cy="4" r="2" />
+      <polyline points="16 18 22 12 16 6" />
+      <polyline points="8 6 2 12 8 18" />
+    </svg>
+  )
+}
+
+
+function DollarSignIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <line x1="12" x2="12" y1="2" y2="22" />
+      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+    </svg>
+  )
+}
+
+
+function MapPinIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+      <circle cx="12" cy="10" r="3" />
     </svg>
   )
 }
@@ -320,7 +384,7 @@ function MenuIcon(props) {
 }
 
 
-function TwitterIcon(props) {
+function SearchIcon(props) {
   return (
     <svg
       {...props}
@@ -334,7 +398,31 @@ function TwitterIcon(props) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+      <circle cx="11" cy="11" r="8" />
+      <path d="m21 21-4.3-4.3" />
+    </svg>
+  )
+}
+
+
+function UsersIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
     </svg>
   )
 }
